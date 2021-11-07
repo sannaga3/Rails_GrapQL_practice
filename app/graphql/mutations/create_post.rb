@@ -4,6 +4,7 @@ module Mutations
 
     argument :title, String, required: true
     argument :body, String, required: true
+    argument :user_id, Int, required: true
 
     def resolve(**args)
       post = Post.create!(args)
